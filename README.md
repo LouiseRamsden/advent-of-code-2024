@@ -7,3 +7,12 @@
 - All code will be in C/C++ unless explicitly stated otherwise, in which I will place an assert in the function with a note to the implementation or explain the lack there of
 - All days are contained within their own class and run in main
 - Code may be very messy but that is what happens when you have a deadline, and a lot of christmas cheer to distribute.
+- Build System is VS2022
+
+### todo-list
+- [x] Make Todo List
+- [ ] Day 1
+- [ ] Day 2
+- [ ] Day 3
+- [ ] Day 4
+#### ...
