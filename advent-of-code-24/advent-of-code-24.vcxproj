@@ -135,6 +135,7 @@
     <ClInclude Include="aoc24.h" />
     <ClInclude Include="DayOne.h" />
     <ClInclude Include="DayTwo.h" />
+    <ClInclude Include="stl.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />

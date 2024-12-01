@@ -1,6 +1,5 @@
 #include "DayTwo.h"
 
-
 uint32_t DayTwo::p1(std::ifstream& in) 
 {
 	return 0;

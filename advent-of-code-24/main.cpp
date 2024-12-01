@@ -1,7 +1,5 @@
 #include "aoc24.h"
-#include <fstream>
-#include <iostream>
-#include <string>
+#include "stl.h"
 
 int main() 
 {
