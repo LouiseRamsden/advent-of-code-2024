@@ -3,33 +3,42 @@
 #include <algorithm>
 
 
-uint32_t DayOne::p1(std::ifstream& in) 
+DayOne::TwinVectors DayOne::splitInput(std::ifstream& in) 
 {
 	std::string str;
-	std::vector<int> rowA;
-	std::vector<int> rowB;
-	uint32_t result = 0;
+	TwinVectors outStruct = {};
 
-	//Splits column into two separate vectors
-	while(std::getline(in,str))
+
+	//Splits each column into two separate vectors same as first part
+	while (std::getline(in, str))
 	{
 		std::stringstream ss(str);
 		std::string temp;
-		std::getline(ss,temp,' ');
-		rowA.push_back(stoi(temp));
+		std::getline(ss, temp, ' ');
+		outStruct.rowA.push_back(stoi(temp));
 		std::getline(ss, temp, ' ');
 		std::getline(ss, temp, ' ');
 		std::getline(ss, temp, ' ');
-		rowB.push_back(stoi(temp));
+		outStruct.rowB.push_back(stoi(temp));
 	}
 
-	//sorts both vector
-	std::stable_sort(rowA.begin(), rowA.end());
-	std::stable_sort(rowB.begin(), rowB.end());
+	return outStruct;
+}
 
-	for (int i = 0; i < rowA.size(); i++) 
+uint32_t DayOne::p1(std::ifstream& in) 
+{
+	
+	TwinVectors vecs = splitInput(in);
+	
+	//sorts both vector
+	std::stable_sort(vecs.rowA.begin(), vecs.rowA.end());
+	std::stable_sort(vecs.rowB.begin(), vecs.rowB.end());
+
+	uint32_t result = 0;
+
+	for (int i = 0; i < vecs.rowA.size(); i++) 
 	{
-		result += std::abs(rowA[i] - rowB[i]);
+		result += std::abs(vecs.rowA[i] - vecs.rowB[i]);
 	}
 
 	return result;
@@ -38,31 +47,12 @@ uint32_t DayOne::p1(std::ifstream& in)
 
 uint32_t DayOne::p2(std::ifstream& in) 
 {
-	std::string str;
-	std::vector<int> rowA;
-	std::vector<int> rowB;
+	TwinVectors vecs = splitInput(in);
+
 	uint32_t result = 0;
-
-	//Splits each column into two separate vectors
-	while (std::getline(in, str))
+	for (int i = 0; i < vecs.rowA.size(); i++)
 	{
-		std::stringstream ss(str);
-		std::string temp;
-		std::getline(ss, temp, ' ');
-		rowA.push_back(stoi(temp));
-		std::getline(ss, temp, ' ');
-		std::getline(ss, temp, ' ');
-		std::getline(ss, temp, ' ');
-		rowB.push_back(stoi(temp));
-	}
-
-	//sorts both vectors
-	std::stable_sort(rowA.begin(), rowA.end());
-	std::stable_sort(rowB.begin(), rowB.end());
-
-	for (int i = 0; i < rowA.size(); i++)
-	{
-		result += rowA[i] * std::count(rowB.begin(), rowB.end(), rowA[i]);
+		result += vecs.rowA[i] * std::count(vecs.rowB.begin(), vecs.rowB.end(), vecs.rowA[i]);
 	}
 
 	return result;

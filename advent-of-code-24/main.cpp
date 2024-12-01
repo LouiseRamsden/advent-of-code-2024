@@ -8,5 +8,5 @@ int main()
 
 	std::ifstream inFile("input.txt");
 	DayOne d1;
-	std::cout << d1.p2(inFile);
+	std::cout << d1.p1(inFile);
 }
