@@ -2,7 +2,7 @@
 
 
 
-DayOne::TwinVectors DayOne::splitInput(std::ifstream& in) 
+TwinVectors DayOne::splitInput(std::ifstream& in) 
 {
 	std::string str;
 	TwinVectors outStruct = {};

@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DayOne.cpp" />
+    <ClCompile Include="DayTwo.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aoc24.h" />
     <ClInclude Include="DayOne.h" />
+    <ClInclude Include="DayTwo.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
