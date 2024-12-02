@@ -24,13 +24,16 @@ uint32_t DayTwo::p1(std::ifstream& in)
 	int safeCount = 0;
 	while (std::getline(in, str)) 
 	{
+		//Make temporary stream, vector and string
 		std::stringstream ss(str);
 		std::vector<int> vec;
 		std::string temp;
+		//populate vector from string and stream
 		while (std::getline(ss, temp, ' '))
 		{
 			vec.push_back(stoi(temp));
 		}
+		//if safe then incrememnt safe count
 		if (isSafe(vec))
 			safeCount++;
 	}
@@ -42,27 +45,31 @@ uint32_t DayTwo::p2(std::ifstream& in)
 	int safeCount = 0;
 	while (std::getline(in, str))
 	{
-		int unsafeFlag = 0;
+		//Make temporary stream, vector and string
 		std::stringstream ss(str);
 		std::vector<int> vec;
 		std::string temp;
+		//populate vector from string and stream
 		while (std::getline(ss, temp, ' '))
 		{
 			vec.push_back(stoi(temp));
 		}
 		
+		//if initial vector is safe then increment safe count
 		if (isSafe(vec)) 
 		{
 			safeCount++;
 		}
 		else 
 		{
+			//for each item in the vector test a new vector with one item missing, if that vector is safe,
+			//increment safe count and exit loop
 			for (int i = 0; i < vec.size(); i++)
 			{
 				std::vector<int> tempVec;
 				for (int j = 0; j < vec.size(); j++)
 				{
-					if (j == i)
+					if (j == i)//skip that item of the vector to make a vector without it
 					{
 						continue;
 					}
