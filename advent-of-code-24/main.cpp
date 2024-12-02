@@ -7,7 +7,7 @@ int main()
 	
 
 	//DAY ONE!
-	DayOne d1;
+	//DayOne d1;
 	//std::cout << d1.p1(inFile);
 	//std::cout << d1.p2(inFile);
 
