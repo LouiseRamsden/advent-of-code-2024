@@ -19,5 +19,19 @@ int main()
 	//DAY THREE!
 	DayThree d3;
 	//std::cout << d3.p1(inFile);
-	std::cout << d3.p2(inFile);
+	//std::cout << d3.p2(inFile);
+
+
+
+//	auto start = std::chrono::high_resolution_clock::now();
+//	std::ios_base::sync_with_stdio(false);
+//	
+//	auto end = std::chrono::high_resolution_clock::now();
+//
+//	double timeTaken = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+//	timeTaken *= 1e-9;
+//
+//	std::cout << "\n Time taken is : " << std::fixed << timeTaken << std::setprecision(9);
+//	std::cout << " sec " << "\n";
+	
 }
