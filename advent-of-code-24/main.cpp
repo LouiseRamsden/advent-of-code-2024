@@ -18,6 +18,6 @@ int main()
 
 	//DAY THREE!
 	DayThree d3;
-	std::cout << d3.p1(inFile);
-	//std::cout << d3.p2(inFile);
+	//std::cout << d3.p1(inFile);
+	std::cout << d3.p2(inFile);
 }

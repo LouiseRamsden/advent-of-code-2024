@@ -36,15 +36,33 @@ uint32_t DayThree::p1(std::ifstream& in)
 uint32_t DayThree::p2(std::ifstream& in) 
 {
 	int result = 0;
-	std::regex mulRegex("mul\\((\\d{1,3}),\\s*(\\d{1,3})\\)");
+	bool shouldMul = true;
+	std::regex doDontRegex("(do\\(\\)|don't\\(\\)|mul\\((-?\\d+),(-?\\d+)\\))");
 	std::smatch res;
 	std::string str;
 	while (std::getline(in, str))
 	{
 		std::string::const_iterator searchStart(str.cbegin());
-		while (std::regex_search(searchStart, str.cend(), res, mulRegex))
+		while (std::regex_search(searchStart, str.cend(), res, doDontRegex))
 		{
-			result += parseMul(res[0].str());
+			if (res[0].str() == "do()") 
+			{
+				shouldMul = true;
+				searchStart = res.suffix().first;
+				continue;
+				
+			}
+			else if (res[0].str() == "don't()")
+			{
+				shouldMul = false;
+				searchStart = res.suffix().first;
+				continue;
+			}
+			
+			if(shouldMul)
+			{
+				result += parseMul(res[0].str());
+			}
 			searchStart = res.suffix().first;
 		}
 	}
