@@ -1,7 +1,7 @@
 #include "DayThree.h"
 
 
-int DayThree::parseMul(std::string mulExp) 
+int DayThree::parseMul(std::string const& mulExp) 
 {
 	std::regex intRegex("(-?\\d+)");
 	int a, b;
@@ -66,6 +66,5 @@ uint32_t DayThree::p2(std::ifstream& in)
 			searchStart = res.suffix().first;
 		}
 	}
-
 	return result;
 }
