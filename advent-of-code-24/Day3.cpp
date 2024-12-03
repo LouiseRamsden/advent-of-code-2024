@@ -1,7 +1,7 @@
-#include "DayThree.h"
+#include "Day3.h"
 
 
-int DayThree::parseMul(std::string const& mulExp) 
+int Day3::parseMul(std::string const& mulExp) 
 {
 	std::regex intRegex("(-?\\d+)");
 	int a, b;
@@ -15,7 +15,7 @@ int DayThree::parseMul(std::string const& mulExp)
 	return a * b;
 }
 
-uint32_t DayThree::p1(std::ifstream& in) 
+uint32_t Day3::p1(std::ifstream& in) 
 {
 	int result = 0;
 	std::regex mulRegex("mul\\((\\d{1,3}),\\s*(\\d{1,3})\\)");
@@ -33,7 +33,7 @@ uint32_t DayThree::p1(std::ifstream& in)
 	
 	return result;
 }
-uint32_t DayThree::p2(std::ifstream& in) 
+uint32_t Day3::p2(std::ifstream& in) 
 {
 	int result = 0;
 	bool shouldMul = true;

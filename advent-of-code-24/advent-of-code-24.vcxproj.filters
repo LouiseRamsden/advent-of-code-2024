@@ -18,13 +18,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DayOne.cpp">
+    <ClCompile Include="Day1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DayTwo.cpp">
+    <ClCompile Include="Day2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DayThree.cpp">
+    <ClCompile Include="Day3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,16 +32,16 @@
     <ClInclude Include="aoc24.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DayOne.h">
+    <ClInclude Include="Day1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DayTwo.h">
+    <ClInclude Include="Day2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DayThree.h">
+    <ClInclude Include="Day3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

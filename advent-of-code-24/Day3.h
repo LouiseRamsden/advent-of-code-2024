@@ -1,9 +1,8 @@
 #pragma once
 #include "stl.h"
-
-class DayTwo
+class Day3
 {
-	bool isSafe(std::vector<int>& inVec);
+	int parseMul(std::string const& mulExp);
 public:
 	uint32_t p1(std::ifstream& in);
 	uint32_t p2(std::ifstream& in);

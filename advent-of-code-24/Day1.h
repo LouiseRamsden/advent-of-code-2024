@@ -7,7 +7,7 @@ struct TwinVectors
 	std::vector<int> rowB;
 };
 
-class DayOne 
+class Day1 
 {
 	
 

@@ -127,16 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DayOne.cpp" />
-    <ClCompile Include="DayThree.cpp" />
-    <ClCompile Include="DayTwo.cpp" />
+    <ClCompile Include="Day1.cpp" />
+    <ClCompile Include="Day3.cpp" />
+    <ClCompile Include="Day2.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aoc24.h" />
-    <ClInclude Include="DayOne.h" />
-    <ClInclude Include="DayThree.h" />
-    <ClInclude Include="DayTwo.h" />
+    <ClInclude Include="Day1.h" />
+    <ClInclude Include="Day3.h" />
+    <ClInclude Include="Day2.h" />
     <ClInclude Include="stl.h" />
   </ItemGroup>
   <ItemGroup>

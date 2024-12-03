@@ -1,6 +1,6 @@
-#include "DayTwo.h"
+#include "Day2.h"
 
-bool DayTwo::isSafe(std::vector<int>& inVec)
+bool Day2::isSafe(std::vector<int>& inVec)
 {
 	if (!std::is_sorted(inVec.begin(), inVec.end()))
 	{
@@ -18,7 +18,7 @@ bool DayTwo::isSafe(std::vector<int>& inVec)
 	return true;
 }
 
-uint32_t DayTwo::p1(std::ifstream& in) 
+uint32_t Day2::p1(std::ifstream& in) 
 {
 	std::string str;
 	int safeCount = 0;
@@ -39,7 +39,7 @@ uint32_t DayTwo::p1(std::ifstream& in)
 	}
 	return safeCount;
 }
-uint32_t DayTwo::p2(std::ifstream& in) 
+uint32_t Day2::p2(std::ifstream& in) 
 {
 	std::string str;
 	int safeCount = 0;

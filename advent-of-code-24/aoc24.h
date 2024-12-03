@@ -3,6 +3,6 @@
 
 
 //Individual Day Headers
-#include "DayOne.h"
-#include "DayTwo.h"
-#include "DayThree.h"
+#include "Day1.h"
+#include "Day1.h"
+#include "Day3.h"

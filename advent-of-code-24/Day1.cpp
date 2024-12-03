@@ -1,8 +1,8 @@
-#include "DayOne.h"
+#include "Day1.h"
 
 
 
-TwinVectors DayOne::splitInput(std::ifstream& in) 
+TwinVectors Day1::splitInput(std::ifstream& in) 
 {
 	std::string str;
 	TwinVectors outStruct = {};
@@ -22,7 +22,7 @@ TwinVectors DayOne::splitInput(std::ifstream& in)
 	return outStruct;
 }
 
-uint32_t DayOne::p1(std::ifstream& in) 
+uint32_t Day1::p1(std::ifstream& in) 
 {
 	//Make both vectors
 	TwinVectors vecs = splitInput(in);
@@ -43,7 +43,7 @@ uint32_t DayOne::p1(std::ifstream& in)
 
 }
 
-uint32_t DayOne::p2(std::ifstream& in) 
+uint32_t Day1::p2(std::ifstream& in) 
 {
 	//Make both vectors
 	TwinVectors vecs = splitInput(in);
