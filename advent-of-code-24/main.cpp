@@ -17,9 +17,14 @@ int main()
 	//std::cout << d2.p2(inFile);
 
 	//DAY THREE!
-	Day3 d3;
+	//Day3 d3;
 	//std::cout << d3.p1(inFile);
-	std::cout << d3.p2(inFile);
+	//std::cout << d3.p2(inFile);
+
+	//DAY FOUR!
+	Day4 d4;
+	std::cout << d4.p1(inFile);
+	//std::cout << d4.p2(inFile);
 
 
 
